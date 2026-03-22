@@ -1,0 +1,122 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 7, 12, 0.72);
+  z-index: 70;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.modal {
+  width: min(1240px, 100%);
+  max-height: 92vh;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-main);
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.loading {
+  min-height: 240px;
+  display: grid;
+  place-items: center;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(420px, 1.15fr);
+  gap: 14px;
+  min-height: 0;
+}
+
+.left,
+.right {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 12px;
+  min-height: 0;
+}
+
+.left {
+  display: grid;
+  gap: 12px;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.right {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  overflow: auto;
+}
+
+.mobileTabs {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .overlay {
+    padding: 8px;
+  }
+
+  .modal {
+    width: 100%;
+    max-height: 96vh;
+    border-radius: var(--radius-lg);
+    padding: 12px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .mobileTabs {
+    display: inline-flex;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .mobileTabs button {
+    border: 1px solid var(--border-strong);
+    color: var(--text-main);
+    background: var(--surface);
+    border-radius: 999px;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+
+  .mobileTabs .activeTab {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-contrast);
+  }
+
+  .hideOnMobile {
+    display: none;
+  }
+}

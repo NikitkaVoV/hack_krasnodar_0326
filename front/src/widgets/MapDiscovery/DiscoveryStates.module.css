@@ -1,0 +1,41 @@
+.state {
+  display: grid;
+  gap: 8px;
+}
+
+.state h3,
+.state p {
+  margin: 0;
+}
+
+.state p {
+  color: var(--text-muted);
+}
+
+.loading {
+  display: grid;
+  gap: 12px;
+}
+
+.skeletons {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.skeletons div {
+  border-radius: var(--radius-md);
+  min-height: 170px;
+  background: linear-gradient(90deg, #1f2c3a 0%, #273646 50%, #1f2c3a 100%);
+  background-size: 220% 100%;
+  animation: pulse 1.5s linear infinite;
+}
+
+@keyframes pulse {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 220% 0;
+  }
+}

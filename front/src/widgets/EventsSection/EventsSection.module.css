@@ -1,0 +1,36 @@
+.section {
+  display: grid;
+  gap: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  display: grid;
+  gap: 10px;
+  background: var(--surface);
+}
+
+.card h3,
+.card p {
+  margin: 0;
+}
+
+.time {
+  color: #88c6cb;
+  font-weight: 650;
+  font-size: 14px;
+}
+
+.description {
+  color: var(--text-secondary);
+}
+
+.location {
+  color: var(--text-main);
+  font-weight: 600;
+}

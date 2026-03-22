@@ -1,0 +1,21 @@
+﻿.cta {
+  border-radius: 28px;
+  padding: 28px;
+  background: linear-gradient(120deg, #022c22 0%, #0f766e 50%, #164e63 100%);
+  color: #fff;
+  display: grid;
+  gap: 12px;
+}
+
+.cta h2,
+.cta p {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+

@@ -1,0 +1,334 @@
+﻿.page {
+  display: grid;
+  gap: 16px;
+  padding-bottom: 42px;
+}
+
+.profileHero {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, rgba(39, 65, 92, 0.82) 0%, rgba(30, 49, 71, 0.95) 100%);
+  box-shadow: var(--shadow-md);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  border: 1px solid var(--border-strong);
+  background: linear-gradient(160deg, rgba(153, 69, 155, 0.45), rgba(69, 113, 155, 0.35));
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.identity h1,
+.identity p {
+  margin: 0;
+}
+
+.login {
+  margin-top: 4px;
+  color: var(--text-secondary);
+}
+
+.status {
+  margin-top: 8px;
+  color: #ccd9e8;
+  max-width: 620px;
+}
+
+.userType {
+  display: inline-flex;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(153, 69, 155, 0.35);
+  background: rgba(153, 69, 155, 0.18);
+  color: #f0d8f0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.mainGrid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+
+.aboutCard {
+  display: grid;
+  gap: 12px;
+}
+
+.aboutCard h2 {
+  margin: 0;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.aboutGrid div {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  padding: 10px;
+  display: grid;
+  gap: 5px;
+}
+
+.aboutGrid span {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.aboutGrid strong {
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.wideField {
+  grid-column: 1 / -1;
+}
+
+.passportCard {
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(153, 69, 155, 0.35);
+  background:
+    radial-gradient(circle at 95% 8%, rgba(153, 69, 155, 0.22) 0%, transparent 38%),
+    linear-gradient(160deg, rgba(42, 63, 88, 0.9) 0%, rgba(25, 42, 60, 0.95) 100%);
+  padding: 18px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.passportCard::after {
+  content: '';
+  position: absolute;
+  right: -24px;
+  top: -24px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 1px solid rgba(153, 69, 155, 0.35);
+}
+
+.passportCard header h2,
+.passportCard header p {
+  margin: 0;
+}
+
+.passportCard header p {
+  margin-top: 4px;
+  color: #d7c4de;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+}
+
+.passportBody {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.passportBody div {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(130, 158, 188, 0.35);
+  background: rgba(26, 41, 58, 0.74);
+  padding: 9px;
+  display: grid;
+  gap: 5px;
+}
+
+.passportBody span {
+  color: #abc0d4;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.passportBody strong {
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.statsCard {
+  display: grid;
+  gap: 12px;
+}
+
+.statsCard h2 {
+  margin: 0;
+}
+
+.statsGrid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.statsGrid div {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+
+.statsGrid span {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.statsGrid strong {
+  color: var(--text-main);
+}
+
+.historySection {
+  display: grid;
+  gap: 12px;
+}
+
+.sectionHead h2,
+.sectionHead p {
+  margin: 0;
+}
+
+.sectionHead p {
+  margin-top: 6px;
+  color: var(--text-secondary);
+}
+
+.historyGrid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.routeCard {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 150px 1fr;
+}
+
+.routeCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.routeBody {
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.routeId {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.routeBody h3,
+.routeDescription {
+  margin: 0;
+}
+
+.routeBody h3 {
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.routeDescription {
+  margin-top: 6px;
+  color: var(--text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+.routeMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.routeMeta span {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  padding: 4px 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.statusChip {
+  border-color: rgba(153, 69, 155, 0.55) !important;
+  background: rgba(153, 69, 155, 0.18) !important;
+  color: #e8d3e8 !important;
+}
+
+@media (max-width: 1080px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .profileHero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .identity {
+    align-items: flex-start;
+  }
+
+  .aboutGrid,
+  .passportBody,
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroActions {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,6 @@
+.root {
+  text-align: center;
+  color: var(--text-secondary);
+  display: grid;
+  gap: 10px;
+}

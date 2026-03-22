@@ -1,0 +1,75 @@
+.root {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 14px;
+}
+
+.root summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.root summary::-webkit-details-marker {
+  display: none;
+}
+
+.grid {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.grid label {
+  display: grid;
+  gap: 6px;
+}
+
+.grid span {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.grid input,
+.grid select {
+  min-height: 38px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  color: var(--text-main);
+  background: var(--surface-2);
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.flags {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+}
+
+.suitableFor {
+  display: grid;
+  gap: 6px;
+}
+
+.suitableFor p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.suitableFor > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

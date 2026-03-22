@@ -1,0 +1,33 @@
+.card {
+  display: grid;
+  gap: 12px;
+  height: 100%;
+}
+
+.visual {
+  border-radius: var(--radius-md);
+  height: 128px;
+  background: linear-gradient(130deg, #1e3347 0%, #2c5676 58%, #3a6f93 100%);
+}
+
+.card h3 {
+  margin: 0;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.card p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.meta {
+  display: grid;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.link {
+  text-decoration: none;
+}

@@ -1,0 +1,75 @@
+
+spring:
+  application:
+    name: tour
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5433/tour}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  jackson:
+    default-property-inclusion: non_null
+  ai:
+    ollama:
+      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      chat:
+        options:
+          model: ${ASSISTANT_OLLAMA_MODEL:qwen2.5-coder:7b}
+          temperature: ${ASSISTANT_OLLAMA_TEMPERATURE:0.2}
+          num-predict: ${ASSISTANT_OLLAMA_NUM_PREDICT:512}
+
+app:
+  security:
+    public-urls:
+      - /api/auth/login
+      - /api/auth/refresh
+      - /api/public/**
+      - /api/routes/public
+      - /api/routes/popular
+      - /api/routes/recommended
+      - /api/routes/collections
+      - /api/routes/list
+      - /api/routes/list/**
+      - /api/route-steps/places/**
+      - /api/route-steps/events/**
+      - /api/events/upcoming
+      - /api/home
+      - /api/map/search
+      - /api/ai/chat
+      - /v3/api-docs/**
+      - /swagger-ui/**
+      - /swagger-ui.html
+      - /error
+    jwt:
+      secret: ${JWT_SECRET:ZGV2LXN1cGVyLXNlY3JldC1rZXktZm9yLW12cC10b2tlbnMtMTIzNDU2Nzg5MDEyMzQ1Ng==}
+      access-expiration-ms: ${JWT_ACCESS_EXPIRATION_MS:900000}
+      refresh-expiration-ms: ${JWT_REFRESH_EXPIRATION_MS:604800000}
+      issuer: ${JWT_ISSUER:tour-app}
+    bootstrap-user:
+      login: ${BOOTSTRAP_USER_LOGIN:admin}
+      password: ${BOOTSTRAP_USER_PASSWORD:admin}
+
+assistant:
+  ai:
+
+    classification-enabled: ${ASSISTANT_AI_CLASSIFICATION_ENABLED:true}
+    presentation-enabled: ${ASSISTANT_AI_PRESENTATION_ENABLED:true}
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+    try-it-out-enabled: true
+    display-request-duration: true
+server:
+  address: 0.0.0.0
+  port: 8080

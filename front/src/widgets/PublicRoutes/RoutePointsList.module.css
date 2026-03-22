@@ -1,0 +1,24 @@
+.wrapper {
+  min-height: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--text-main);
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  min-height: 0;
+  max-height: min(56vh, 560px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+  align-content: start;
+  grid-auto-rows: minmax(120px, auto);
+}

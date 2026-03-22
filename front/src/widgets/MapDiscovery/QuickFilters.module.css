@@ -1,0 +1,15 @@
+﻿.root {
+  display: grid;
+  gap: 10px;
+}
+
+.root h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

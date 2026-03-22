@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:tour-test;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+app:
+  security:
+    public-urls:
+      - /api/auth/login
+      - /api/auth/refresh
+      - /api/public/**
+      - /api/routes/public
+      - /api/routes/popular
+      - /api/routes/recommended
+      - /api/routes/collections
+      - /api/routes/list
+      - /api/routes/list/**
+      - /api/route-steps/places/**
+      - /api/route-steps/events/**
+      - /api/events/upcoming
+      - /api/home
+      - /api/map/search
+      - /api/ai/chat
+      - /v3/api-docs/**
+      - /swagger-ui/**
+      - /swagger-ui.html
+      - /error
+    jwt:
+      secret: ZGV2LXN1cGVyLXNlY3JldC1rZXktZm9yLW12cC10b2tlbnMtMTIzNDU2Nzg5MDEyMzQ1Ng==
+      access-expiration-ms: 900000
+      refresh-expiration-ms: 604800000
+      issuer: tour-test
+    bootstrap-user:
+      login: admin
+      password: admin
+
+assistant:
+  ai:
+    classification-enabled: false
+    presentation-enabled: false

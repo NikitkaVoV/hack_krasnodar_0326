@@ -1,0 +1,44 @@
+﻿.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.bannerA,
+.bannerB {
+  border-radius: 24px;
+  padding: 24px;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  color: #fff;
+}
+
+.bannerA {
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.15), rgba(15, 23, 42, 0.7)),
+    linear-gradient(120deg, #0f766e, #115e59);
+}
+
+.bannerB {
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.18), rgba(15, 23, 42, 0.72)),
+    linear-gradient(120deg, #0369a1, #1d4ed8);
+}
+
+.bannerA h3,
+.bannerA p,
+.bannerB h3,
+.bannerB p {
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+

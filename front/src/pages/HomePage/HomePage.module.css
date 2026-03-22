@@ -1,0 +1,29 @@
+﻿.page {
+  display: grid;
+  gap: 0;
+  padding-bottom: 44px;
+}
+
+.searchWrap {
+  width: min(1120px, calc(100% - 32px));
+  margin-inline: auto;
+  margin-top: -58px;
+  margin-bottom: 32px;
+}
+
+.sections {
+  display: grid;
+  gap: 54px;
+  padding-top: 0;
+}
+
+@media (max-width: 700px) {
+  .searchWrap {
+    margin-top: -34px;
+    margin-bottom: 24px;
+  }
+
+  .sections {
+    gap: 42px;
+  }
+}

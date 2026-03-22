@@ -1,0 +1,36 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.skeleton {
+  min-height: 290px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(90deg, #1f2c3a 0%, #273646 50%, #1f2c3a 100%);
+  background-size: 220% 100%;
+  animation: pulse 1.5s linear infinite;
+}
+
+@keyframes pulse {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 220% 0;
+  }
+}
+
+.state {
+  display: grid;
+  gap: 10px;
+}
+
+.state h3,
+.state p {
+  margin: 0;
+}
+
+.state p {
+  color: var(--text-secondary);
+}

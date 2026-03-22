@@ -1,0 +1,84 @@
+﻿.root {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+}
+
+.root h2,
+.root p {
+  margin: 0;
+}
+
+.root p {
+  margin-top: 6px;
+  color: var(--text-secondary);
+}
+
+.ok,
+.tight,
+.overloaded {
+  font-weight: 700;
+}
+
+.ok {
+  color: #8dd1a7;
+}
+
+.tight {
+  color: #f0cc78;
+}
+
+.overloaded {
+  color: #f08f86;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.metrics div {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  padding: 9px;
+  display: grid;
+  gap: 4px;
+}
+
+.metrics span {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.metrics strong {
+  font-size: 16px;
+}
+
+.minus {
+  color: #ee8b82;
+}
+
+.quickActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+

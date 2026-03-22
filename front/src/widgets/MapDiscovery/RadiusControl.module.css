@@ -1,0 +1,37 @@
+.root {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.topRow h3,
+.topRow span,
+.root p {
+  margin: 0;
+}
+
+.topRow span {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.root p {
+  color: var(--text-muted);
+  font-size: 13px;
+}

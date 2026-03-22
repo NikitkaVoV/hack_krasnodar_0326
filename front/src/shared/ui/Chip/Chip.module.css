@@ -1,0 +1,21 @@
+.chip {
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  padding: 7px 13px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+}
+
+.chip:hover {
+  border-color: #45607b;
+  background: var(--surface-3);
+}
+
+.active {
+  border-color: rgba(94, 174, 179, 0.52);
+  background: var(--accent-soft);
+  color: #a7d2d5;
+}

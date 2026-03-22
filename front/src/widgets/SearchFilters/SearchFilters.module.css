@@ -1,0 +1,13 @@
+﻿.root {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+

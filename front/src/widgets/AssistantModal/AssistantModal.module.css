@@ -1,0 +1,193 @@
+﻿.launcher {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 2147483000;
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  border: 1px solid rgba(153, 69, 155, 0.48);
+  background: linear-gradient(160deg, rgba(153, 69, 155, 0.86), rgba(95, 60, 122, 0.92));
+  color: #f6eaf6;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(16, 10, 23, 0.36);
+}
+
+.launcher:hover {
+  transform: translateY(-1px);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483001;
+  background: rgba(6, 10, 15, 0.62);
+  backdrop-filter: blur(3px);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.modal {
+  width: min(760px, calc(100vw - 36px));
+  max-height: min(86vh, 840px);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border-strong);
+  background: linear-gradient(180deg, rgba(38, 61, 88, 0.96) 0%, rgba(26, 45, 66, 0.96) 100%);
+  box-shadow: 0 22px 48px rgba(5, 9, 14, 0.5);
+  padding: 14px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.header h3,
+.header p {
+  margin: 0;
+}
+
+.header p {
+  margin-top: 4px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.headerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chat {
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(22, 37, 53, 0.9);
+  overflow: auto;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  padding: 10px;
+}
+
+.empty {
+  border-radius: 12px;
+  border: 1px dashed var(--border-strong);
+  color: var(--text-secondary);
+  padding: 14px;
+  font-size: 14px;
+}
+
+.message {
+  border-radius: 14px;
+  border: 1px solid transparent;
+  padding: 10px;
+  display: grid;
+  gap: 6px;
+}
+
+.message p,
+.message span {
+  margin: 0;
+}
+
+.message span {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.routeSaveRow {
+  display: grid;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.routeSaveSuccess {
+  color: #94e0a9;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.routeSaveError {
+  color: #ffb3ab;
+  font-size: 12px;
+}
+
+.user {
+  justify-self: end;
+  max-width: min(85%, 600px);
+  background: rgba(153, 69, 155, 0.2);
+  border-color: rgba(153, 69, 155, 0.4);
+}
+
+.assistant,
+.error {
+  justify-self: start;
+  max-width: min(90%, 680px);
+  cursor: copy;
+}
+
+.assistant {
+  background: rgba(48, 78, 110, 0.62);
+  border-color: rgba(114, 150, 188, 0.4);
+}
+
+.error {
+  background: rgba(126, 68, 63, 0.25);
+  border-color: rgba(212, 106, 97, 0.54);
+}
+
+.footer {
+  display: grid;
+  gap: 8px;
+}
+
+.footer textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 78px;
+  max-height: 220px;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-2);
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.footer textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--focus-ring);
+}
+
+@media (max-width: 760px) {
+  .launcher {
+    width: 52px;
+    height: 52px;
+    left: 14px;
+    bottom: 14px;
+  }
+
+  .overlay {
+    padding: 10px;
+  }
+
+  .modal {
+    width: calc(100vw - 20px);
+    max-height: 92vh;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+}

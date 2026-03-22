@@ -1,0 +1,10 @@
+﻿.root {
+  display: grid;
+  gap: 6px;
+}
+
+.error {
+  color: var(--danger);
+  font-size: 12px;
+  line-height: 1.25;
+}

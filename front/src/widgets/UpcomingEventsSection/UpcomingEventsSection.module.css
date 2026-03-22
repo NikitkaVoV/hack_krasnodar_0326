@@ -1,0 +1,39 @@
+﻿.section {
+  display: grid;
+  gap: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background:
+    linear-gradient(180deg, rgba(14, 116, 144, 0.04) 0%, rgba(14, 116, 144, 0) 70%),
+    #fff;
+}
+
+.date {
+  margin: 0;
+  color: #0369a1;
+  font-size: 13px;
+}
+
+.card h3 {
+  margin: 10px 0 8px;
+}
+
+.card p {
+  margin: 0;
+  color: #475569;
+}
+
+.location {
+  margin-top: 12px !important;
+  color: #0f172a !important;
+  font-weight: 600;
+}
+
+

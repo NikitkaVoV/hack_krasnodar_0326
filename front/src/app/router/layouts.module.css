@@ -1,0 +1,44 @@
+.root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.mainHome {
+  padding-top: 0;
+}
+
+.mainDefault {
+  padding-top: 84px;
+}
+
+.authRoot {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(79, 159, 164, 0.16), transparent 36%),
+    radial-gradient(circle at 85% 90%, rgba(85, 110, 138, 0.18), transparent 34%),
+    linear-gradient(180deg, #0c1118 0%, #0f1722 100%);
+}
+
+.authMain {
+  width: min(980px, 100%);
+}
+
+@media (max-width: 900px) {
+  .mainDefault {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 580px) {
+  .mainDefault {
+    padding-top: 160px;
+  }
+}

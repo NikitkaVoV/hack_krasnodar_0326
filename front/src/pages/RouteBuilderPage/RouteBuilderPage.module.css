@@ -1,0 +1,53 @@
+﻿.page {
+  display: grid;
+  gap: 16px;
+}
+
+.hero {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  padding: 22px;
+  color: var(--text-main);
+  background: linear-gradient(150deg, rgba(44, 72, 103, 0.78) 0%, rgba(33, 55, 79, 0.95) 100%);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.hero h1,
+.hero p {
+  margin: 0;
+}
+
+.hero p {
+  margin-top: 8px;
+  color: var(--text-secondary);
+  max-width: 760px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 14px;
+}
+
+.stateBlock {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
